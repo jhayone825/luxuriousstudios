@@ -10,13 +10,12 @@
         :root { --gold: #b38728; --dark: #050505; }
         body { background-color: var(--dark); color: #e5e5e5; font-family: 'Inter', sans-serif; overflow-x: hidden; position: relative; }
         
-        /* 4. BACKGROUND GRAIN/SMOKE OVERLAY (VISIBLE) */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-            opacity: 0.08; /* Increased visibility */
+            opacity: 0.08;
             pointer-events: none;
             z-index: 2000;
         }
@@ -26,7 +25,6 @@
         .gold-gradient { background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .gold-bg { background: linear-gradient(45deg, #b38728, #bf953f); color: black; }
         
-        /* Selection Overlay Menu */
         #menu-overlay { 
             display: none; 
             position: fixed; 
@@ -43,18 +41,16 @@
         .page-section.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* 3. SCROLL-TRIGGERED GOLD BORDER (ENHANCED) */
         .glass { 
             background: rgba(255, 255, 255, 0.02); 
             border: 1px solid rgba(255, 255, 255, 0.08); 
             transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); 
         }
         
-        /* The "Revealed" state triggered by Scroll */
         .glass.revealed {
-            border-color: rgba(179, 135, 40, 0.8); /* Brighter Gold */
-            box-shadow: 0 0 30px rgba(179, 135, 40, 0.15); /* Soft Glow */
-            transform: scale(1.01); /* Subtle "Lift" */
+            border-color: rgba(179, 135, 40, 0.8); 
+            box-shadow: 0 0 30px rgba(179, 135, 40, 0.15); 
+            transform: scale(1.01); 
         }
         
         .social-card:hover { border-color: var(--gold) !important; transform: translateY(-5px) scale(1.02); }
@@ -62,18 +58,15 @@
         input, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; }
         input:focus { border-color: var(--gold) !important; outline: none; }
 
-        /* Chatbot Custom Styles */
         #ai-chatbot { z-index: 300; display: none; }
         .chat-bubble { animation: chatPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         @keyframes chatPop { from { opacity: 0; transform: scale(0.8) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
         .cursor { border-right: 2px solid var(--gold); animation: blink 0.7s infinite; }
         @keyframes blink { 50% { border-color: transparent; } }
 
-        /* VIDEO EMBED STYLING */
         .video-wrapper { position: relative; width: 100%; border-radius: 16px; overflow: hidden; padding-top: 56.25%; background: #000; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
 
-        /* DEX REDIRECT BOX */
         .dex-redirect-box {
             cursor: pointer;
             transition: all 0.4s ease;
@@ -84,8 +77,12 @@
             border-color: var(--gold);
         }
 
-        /* Improvement: Breathing Space */
         section { padding-top: 100px; padding-bottom: 100px; }
+
+        /* ROADMAP STYLES */
+        .roadmap-container { position: relative; border-left: 2px solid var(--gold); margin-left: 20px; padding-left: 30px; }
+        .roadmap-point { position: relative; margin-bottom: 40px; }
+        .roadmap-point::before { content: ""; position: absolute; left: -39px; top: 0; width: 16px; height: 16px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 10px var(--gold); }
     </style>
 </head>
 <body>
@@ -117,39 +114,34 @@
         <button onclick="toggleMenu()" class="mt-12 text-gray-500 uppercase text-[10px] tracking-[0.4em] hover:text-white transition">Close Menu</button>
     </div>
 
-    <div id="ai-chatbot" class="fixed bottom-6 right-6 w-[350px] max-w-[90vw]">
-        <div class="glass backdrop-blur-xl rounded-3xl overflow-hidden border-[#b38728]/20 shadow-2xl">
-            <div class="gold-bg p-4 flex justify-between items-center">
-                <div class="flex items-center gap-2">
-                    <div class="w-2 h-2 rounded-full bg-black animate-pulse"></div>
-                    <span class="text-[10px] font-black uppercase tracking-tighter">Lounge AI Concierge</span>
-                </div>
-                <button onclick="closeChat()" class="text-black/50 hover:text-black text-xs">✕</button>
-            </div>
-            
-            <div class="p-6 space-y-4 max-h-[400px] overflow-y-auto" id="chat-content">
-                <div class="chat-bubble bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/10">
-                    <p id="ai-text" class="text-sm leading-relaxed text-gray-200"><span class="cursor"></span></p>
-                </div>
-
-                <div id="chat-form" class="hidden space-y-3 pt-2">
-                    <input type="text" id="chat-name" placeholder="Name" class="w-full p-3 rounded-xl text-xs">
-                    <input type="email" id="chat-email" placeholder="Email" class="w-full p-3 rounded-xl text-xs">
-                    <button onclick="submitChatLead()" class="gold-bg w-full py-3 rounded-xl font-black uppercase text-[10px] tracking-widest">Submit</button>
-                </div>
+    <div class="relative w-full h-screen flex items-center justify-center overflow-hidden border-b border-white/5 bg-black">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://i.ibb.co/PGJYhfDG/4776f784-3616-4af6-b104-56ed480fae3a.jpg')] bg-cover bg-center grayscale scale-110"></div>
+        <div class="relative z-10 text-center px-6">
+            <h1 class="luxury-font text-6xl md:text-[8rem] leading-none mb-4 italic font-black gold-gradient drop-shadow-2xl">
+                The Lounge
+            </h1>
+            <p class="text-white text-lg md:text-2xl font-light tracking-[0.4em] uppercase mb-12">
+                Redefining <span class="font-black gold-text italic">Digital Luxury</span>
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <button onclick="navTo('buy')" class="gold-bg px-14 py-4 rounded-full font-black uppercase tracking-[0.2em] text-[12px] shadow-[0_0_40px_rgba(179,135,40,0.5)]">
+                    Acquire $TLLT
+                </button>
+                <button onclick="navTo('socials')" class="glass px-14 py-4 rounded-full font-black uppercase tracking-[0.2em] text-[12px]">
+                    Enter Community
+                </button>
             </div>
         </div>
     </div>
 
-    <button onclick="handleAiClick()" class="fixed bottom-6 right-6 w-14 h-14 gold-bg rounded-full flex items-center justify-center shadow-lg z-[290] hover:scale-110 transition active:scale-95">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-    </button>
-
-    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+    <main class="pt-20 pb-20 px-6 max-w-7xl mx-auto">
 
         <section id="home" class="page-section active text-center">
+            <div class="mb-20">
+                <h2 class="luxury-font text-4xl md:text-6xl italic gold-text mb-4">"No BS. No Limits. Just Luxury."</h2>
+                <div class="h-px w-24 bg-gold mx-auto opacity-50"></div>
+            </div>
+
             <h1 class="luxury-font text-5xl md:text-[7rem] leading-none mb-8 italic font-black gold-gradient">
                 The Future of <br> Creator Coins <br> Starts Here
             </h1>
@@ -158,28 +150,28 @@
             </p>
             
             <div class="flex flex-col md:flex-row gap-6 justify-center mb-20">
-                <a href="https://pump.fun/coin/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" target="_blank" class="gold-bg px-12 py-4 rounded-full font-black uppercase tracking-widest text-[12px] shadow-[0_0_30px_rgba(179,135,40,0.4)]">
+                <a href="https://pump.fun/coin/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" target="_blank" class="gold-bg px-12 py-4 rounded-full font-black uppercase tracking-widest text-[12px] shadow-[0_0_30px_rgba(179,135,40,0.4)] hover:scale-110 transition">
                     Buy $TLLT
                 </a>
-                <a href="https://t.me/TheLuxuriousLounge" target="_blank" class="glass px-12 py-4 rounded-full font-black uppercase tracking-widest text-[12px] hover:border-[#b38728] transition">
+                <a href="https://t.me/TheLuxuriousLounge" target="_blank" class="glass px-12 py-4 rounded-full font-black uppercase tracking-widest text-[12px] hover:border-[#b38728] transition hover:bg-white/5">
                     Join Community
                 </a>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32">
-                <div class="p-8 border-r border-white/5 last:border-0">
+                <div class="p-8 border-r border-white/5 last:border-0 glass rounded-2xl">
                     <p class="gold-text text-3xl font-black mb-2">100%</p>
                     <p class="text-[10px] text-gray-500 uppercase tracking-widest">Transparent</p>
                 </div>
-                <div class="p-8 border-r border-white/5 last:border-0">
+                <div class="p-8 border-r border-white/5 last:border-0 glass rounded-2xl">
                     <p class="gold-text text-3xl font-black mb-2">24/7</p>
                     <p class="text-[10px] text-gray-500 uppercase tracking-widest">Live Alpha</p>
                 </div>
-                <div class="p-8 border-r border-white/5 last:border-0">
+                <div class="p-8 border-r border-white/5 last:border-0 glass rounded-2xl">
                     <p class="gold-text text-3xl font-black mb-2">SOL</p>
                     <p class="text-[10px] text-gray-500 uppercase tracking-widest">Main Chain</p>
                 </div>
-                <div class="p-8">
+                <div class="p-8 glass rounded-2xl">
                     <p class="gold-text text-3xl font-black mb-2">NO BS</p>
                     <p class="text-[10px] text-gray-500 uppercase tracking-widest">Guaranteed</p>
                 </div>
@@ -237,8 +229,33 @@
             </div>
         </section>
 
+        <section id="roadmap" class="page-section max-w-4xl mx-auto">
+            <h2 class="luxury-font text-5xl md:text-[6rem] mb-16 italic gold-text text-center">Roadmap</h2>
+            <div class="roadmap-container">
+                <div class="roadmap-point">
+                    <h4 class="gold-text font-black uppercase text-xs tracking-widest mb-2">Phase 01: The Foundation</h4>
+                    <p class="text-gray-400 text-sm">Token launch on Pump.fun and establishing the core "No BS" community. Initial livestream kickoff.</p>
+                </div>
+                <div class="roadmap-point">
+                    <h4 class="gold-text font-black uppercase text-xs tracking-widest mb-2">Phase 02: Elite Content</h4>
+                    <p class="text-gray-400 text-sm">Expanding YouTube presence and regular bi-weekly streaming hours with high-end alpha drops.</p>
+                </div>
+                <div class="roadmap-point">
+                    <h4 class="gold-text font-black uppercase text-xs tracking-widest mb-2">Phase 03: The Vault Expansion</h4>
+                    <p class="text-gray-400 text-sm">Implementation of the monthly luxury giveaway system and holder rewards vault.</p>
+                </div>
+                <div class="roadmap-point">
+                    <h4 class="gold-text font-black uppercase text-xs tracking-widest mb-2">Phase 04: Cultural Legacy</h4>
+                    <p class="text-gray-400 text-sm">Mainstream partnerships and large-scale mortgage/debt payoffs live for the community.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="page-section max-w-4xl mx-auto">
-            <h2 class="luxury-font text-6xl md:text-8xl mb-16 italic gold-text">About The Lounge</h2>
+            <div class="flex items-center gap-6 mb-16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-text"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <h2 class="luxury-font text-6xl md:text-8xl italic gold-text">About Us</h2>
+            </div>
             <div class="space-y-12 text-xl leading-relaxed text-gray-300">
                 <p>This isn’t a game, and I’m not here to play pretend. Before crypto, I worked for the <span class="text-white font-black underline decoration-gold/50">Department of Defense</span> — the real DOD, not your buddy’s gaming clan.</p>
                 <p>Then I built my own company from scratch, ran it solo for over seven years, and still haven’t slowed down. Now I’m bringing that same energy to <span class="gold-text font-bold">The Luxurious Lounge</span> — a live show and token-powered community that mixes money, humor, and chaos.</p>
@@ -248,7 +265,10 @@
         </section>
 
         <section id="vision" class="page-section max-w-4xl mx-auto">
-            <h2 class="luxury-font text-6xl md:text-8xl mb-16 italic gold-text">The Vision</h2>
+            <div class="flex items-center gap-6 mb-16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-text"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <h2 class="luxury-font text-6xl md:text-8xl italic gold-text">The Vision</h2>
+            </div>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="glass p-12 rounded-2xl">
                     <h4 class="font-black text-[12px] uppercase gold-text mb-6 tracking-widest">Legendary Prizes</h4>
@@ -316,7 +336,10 @@
         </section>
 
         <section id="buy" class="page-section max-w-3xl mx-auto">
-            <h2 class="luxury-font text-6xl mb-16 italic gold-text text-center">How to Buy $TLLT</h2>
+            <div class="flex items-center justify-center gap-6 mb-16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-text"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                <h2 class="luxury-font text-6xl italic gold-text text-center">How to Buy $TLLT</h2>
+            </div>
             <div class="space-y-8">
                 <div class="glass p-8 rounded-xl flex items-center gap-8">
                     <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center font-black text-xl">1</div>
@@ -338,7 +361,10 @@
         </section>
 
         <section id="faq" class="page-section max-w-4xl mx-auto">
-            <h2 class="luxury-font text-6xl mb-20 italic gold-text">FAQ</h2>
+             <div class="flex items-center gap-6 mb-16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="gold-text"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                <h2 class="luxury-font text-6xl italic gold-text">FAQ</h2>
+            </div>
             <div class="space-y-12">
                 <div class="glass p-10 rounded-2xl">
                     <h4 class="font-bold text-2xl mb-4">What is The Luxurious Lounge?</h4>
@@ -398,8 +424,41 @@
 
     </main>
 
-    <footer class="text-center py-24 border-t border-white/5 opacity-30 text-[10px] tracking-[0.5em] uppercase">
-        © 2025 THE LUXURIOUS LOUNGE | REDEFINING LUXURY
+    <footer class="border-t border-white/5 bg-black py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 text-center md:text-left">
+            <div>
+                <h3 class="luxury-font text-2xl gold-text italic mb-6">The Lounge</h3>
+                <p class="text-[10px] text-gray-500 uppercase tracking-[0.2em] leading-relaxed">
+                    A veteran-led ecosystem on Solana. No BS. High Performance. Pure Luxury.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-black text-[10px] uppercase tracking-widest text-white mb-6">Explore</h4>
+                <ul class="space-y-4 text-[10px] uppercase tracking-widest text-gray-600 font-bold">
+                    <li><button onclick="navTo('home')" class="hover:text-gold transition">Home</button></li>
+                    <li><button onclick="navTo('about')" class="hover:text-gold transition">About Us</button></li>
+                    <li><button onclick="navTo('vision')" class="hover:text-gold transition">Vision</button></li>
+                    <li><button onclick="navTo('buy')" class="hover:text-gold transition">Buy $TLLT</button></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-[10px] uppercase tracking-widest text-white mb-6">Connect</h4>
+                <ul class="space-y-4 text-[10px] uppercase tracking-widest text-gray-600 font-bold">
+                    <li><a href="https://x.com/theluxxlounge?s=21" class="hover:text-gold transition">X (Twitter)</a></li>
+                    <li><a href="https://t.me/TheLuxuriousLounge" class="hover:text-gold transition">Telegram</a></li>
+                    <li><a href="https://youtube.com/@luxuriouslounge" class="hover:text-gold transition">YouTube</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-[10px] uppercase tracking-widest text-white mb-6">Legal</h4>
+                <p class="text-[9px] text-gray-700 uppercase leading-relaxed tracking-widest">
+                    Digital assets carry risk. $TLLT is a content-driven utility token. Always verify the Official CA.
+                </p>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-[9px] tracking-[0.6em] text-gray-700 uppercase border-t border-white/5 pt-10">
+            © 2025 THE LUXURIOUS LOUNGE | ALL RIGHTS RESERVED
+        </div>
     </footer>
 
     <script>
@@ -413,7 +472,7 @@
         function navTo(id) {
             document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
-            toggleMenu();
+            if(document.getElementById('menu-overlay').style.display === 'flex') toggleMenu();
             window.scrollTo(0, 0);
             initScrollObserver();
         }
