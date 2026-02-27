@@ -83,6 +83,9 @@
             background: rgba(179, 135, 40, 0.1);
             border-color: var(--gold);
         }
+
+        /* Improvement: Breathing Space */
+        section { padding-top: 100px; padding-bottom: 100px; }
     </style>
 </head>
 <body>
@@ -147,28 +150,60 @@
     <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
 
         <section id="home" class="page-section active text-center">
-            <h1 class="luxury-font text-6xl md:text-9xl mb-6 italic">The Lounge</h1>
-            <p class="text-gray-400 tracking-[0.5em] uppercase text-sm mb-12">Rewards, Giveaways, Livestreams, Interviews, X Spaces & More.</p>
+            <h1 class="luxury-font text-5xl md:text-[7rem] leading-none mb-8 italic font-black gold-gradient">
+                The Future of <br> Creator Coins <br> Starts Here
+            </h1>
+            <p class="text-gray-400 tracking-[0.2em] uppercase text-sm md:text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                The <span class="text-white font-bold">Luxurious Lounge</span> is where culture, crypto and community collide.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-6 justify-center mb-20">
+                <a href="https://pump.fun/coin/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" target="_blank" class="gold-bg px-12 py-4 rounded-full font-black uppercase tracking-widest text-[12px] shadow-[0_0_30px_rgba(179,135,40,0.4)]">
+                    Buy $TLLT
+                </a>
+                <a href="https://t.me/TheLuxuriousLounge" target="_blank" class="glass px-12 py-4 rounded-full font-black uppercase tracking-widest text-[12px] hover:border-[#b38728] transition">
+                    Join Community
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-32">
+                <div class="p-8 border-r border-white/5 last:border-0">
+                    <p class="gold-text text-3xl font-black mb-2">100%</p>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest">Transparent</p>
+                </div>
+                <div class="p-8 border-r border-white/5 last:border-0">
+                    <p class="gold-text text-3xl font-black mb-2">24/7</p>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest">Live Alpha</p>
+                </div>
+                <div class="p-8 border-r border-white/5 last:border-0">
+                    <p class="gold-text text-3xl font-black mb-2">SOL</p>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest">Main Chain</p>
+                </div>
+                <div class="p-8">
+                    <p class="gold-text text-3xl font-black mb-2">NO BS</p>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest">Guaranteed</p>
+                </div>
+            </div>
             
             <div class="glass p-6 inline-block rounded-xl border-[#b38728]/30 mb-12">
                 <span class="text-[10px] text-gray-500 block mb-2 uppercase tracking-widest font-bold">Official Contract Address</span>
                 <code id="ca" class="text-[#b38728] text-sm md:text-xl font-bold break-all">28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump</code>
             </div>
 
-            <a href="https://dexscreener.com/solana/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" target="_blank" class="block max-w-5xl mx-auto mb-16 glass p-12 rounded-2xl border-[#b38728]/20 shadow-2xl dex-redirect-box">
+            <a href="https://dexscreener.com/solana/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" target="_blank" class="block max-w-5xl mx-auto mb-32 glass p-12 rounded-2xl border-[#b38728]/20 shadow-2xl dex-redirect-box">
                 <div class="flex flex-col items-center gap-4">
                     <div class="w-12 h-12 gold-text border border-[#b38728]/40 rounded-full flex items-center justify-center animate-pulse">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                         </svg>
                     </div>
-                    <h3 class="luxury-font text-2xl gold-text italic">Launch Live Market Analytics</h3>
+                    <h3 class="luxury-font text-3xl gold-text italic">Launch Live Market Analytics</h3>
                     <p class="text-[10px] uppercase tracking-[0.4em] text-gray-500">Connect to DexScreener Hub</p>
                 </div>
             </a>
 
-            <div class="max-w-5xl mx-auto mb-20 text-left">
-                <h2 class="luxury-font text-3xl mb-8 italic gold-text text-center">The Vision: Official Trailer</h2>
+            <div class="max-w-5xl mx-auto mb-32 text-left">
+                <h2 class="luxury-font text-5xl mb-12 italic gold-text text-center">The Vision: Official Trailer</h2>
                 <div class="glass p-4 rounded-3xl border-[#b38728]/30">
                     <div class="video-wrapper shadow-2xl">
                         <iframe 
@@ -183,19 +218,19 @@
                 <p class="text-center text-gray-500 text-[10px] mt-6 uppercase tracking-[0.3em]">No BS. No Green Screens. Just Real Business.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <div class="glass p-8 rounded-2xl social-card">
-                    <h3 class="luxury-font text-xl mb-4 gold-text italic">Official X Account</h3>
+            <div class="grid md:grid-cols-3 gap-12 text-left">
+                <div class="glass p-10 rounded-2xl social-card">
+                    <h3 class="luxury-font text-2xl mb-4 gold-text italic">Official X Account</h3>
                     <p class="text-xs text-gray-400 mb-6 leading-relaxed">Stay connected with The Luxurious Lounge on X — fast conversations, sharp takes, and alpha dropping without warning.</p>
                     <a href="https://x.com/theluxxlounge?s=21" class="gold-bg px-6 py-2 rounded text-[10px] font-black uppercase">Follow</a>
                 </div>
-                <div class="glass p-8 rounded-2xl social-card">
-                    <h3 class="luxury-font text-xl mb-4 gold-text italic">Pump.fun Profile</h3>
+                <div class="glass p-10 rounded-2xl social-card">
+                    <h3 class="luxury-font text-2xl mb-4 gold-text italic">Pump.fun Profile</h3>
                     <p class="text-xs text-gray-400 mb-6 leading-relaxed">Catch the action live on Pump.fun — where entertainment meets real talk on markets, trends, and community plays.</p>
                     <a href="https://pump.fun/coin/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" class="gold-bg px-6 py-2 rounded text-[10px] font-black uppercase">Buy & Watch</a>
                 </div>
-                <div class="glass p-8 rounded-2xl social-card">
-                    <h3 class="luxury-font text-xl mb-4 gold-text italic">Live Chart</h3>
+                <div class="glass p-10 rounded-2xl social-card">
+                    <h3 class="luxury-font text-2xl mb-4 gold-text italic">Live Chart</h3>
                     <p class="text-xs text-gray-400 mb-6 leading-relaxed">Track $TLLT live on DexScreener — real-time price, volume, liquidity, and every spike as it happens.</p>
                     <a href="https://dexscreener.com/solana/28etj8fbo5sqqbupgdylrdsyguow9dfkfrwn5xurpump" class="gold-bg px-6 py-2 rounded text-[10px] font-black uppercase">View Chart</a>
                 </div>
@@ -203,34 +238,34 @@
         </section>
 
         <section id="about" class="page-section max-w-4xl mx-auto">
-            <h2 class="luxury-font text-5xl mb-12 italic gold-text">About The Lounge</h2>
-            <div class="space-y-8 text-lg leading-relaxed text-gray-300">
-                <p>This isn’t a game, and I’m not here to play pretend. Before crypto, I worked for the <span class="text-white font-bold">Department of Defense</span> — the real DOD, not your buddy’s gaming clan.</p>
-                <p>Then I built my own company from scratch, ran it solo for over seven years, and still haven’t slowed down. Now I’m bringing that same energy to <span class="gold-text">The Luxurious Lounge</span> — a live show and token-powered community that mixes money, humor, and chaos.</p>
-                <p>Sponsored by one of the best beard brands in the game, we talk markets, trends, culture, and whatever’s real in the moment. This isn’t a meme coin. This is a content creator’s coin with purpose.</p>
-                <p class="border-l-4 border-[#b38728] pl-6 italic text-2xl text-white">"I’m here, I’m live, and I’m locked the F*** in."</p>
+            <h2 class="luxury-font text-6xl md:text-8xl mb-16 italic gold-text">About The Lounge</h2>
+            <div class="space-y-12 text-xl leading-relaxed text-gray-300">
+                <p>This isn’t a game, and I’m not here to play pretend. Before crypto, I worked for the <span class="text-white font-black underline decoration-gold/50">Department of Defense</span> — the real DOD, not your buddy’s gaming clan.</p>
+                <p>Then I built my own company from scratch, ran it solo for over seven years, and still haven’t slowed down. Now I’m bringing that same energy to <span class="gold-text font-bold">The Luxurious Lounge</span> — a live show and token-powered community that mixes money, humor, and chaos.</p>
+                <p>Sponsored by one of the best beard brands in the game, we talk markets, trends, culture, and whatever’s real in the moment. This isn’t a meme coin. This is a <span class="text-white font-bold">content creator’s coin</span> with purpose.</p>
+                <p class="border-l-4 border-[#b38728] pl-8 italic text-3xl text-white font-semibold">"I’m here, I’m live, and I’m locked the F*** in."</p>
             </div>
         </section>
 
         <section id="vision" class="page-section max-w-4xl mx-auto">
-            <h2 class="luxury-font text-5xl mb-12 italic gold-text">The Vision</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass p-8 rounded-2xl">
-                    <h4 class="font-black text-[10px] uppercase gold-text mb-4">Legendary Prizes</h4>
-                    <p class="text-sm text-gray-400 mb-4">Giving away a new (used) car or truck — real prizes, not rented Lambos. Paying off someone’s mortgage live on stream.</p>
+            <h2 class="luxury-font text-6xl md:text-8xl mb-16 italic gold-text">The Vision</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="glass p-12 rounded-2xl">
+                    <h4 class="font-black text-[12px] uppercase gold-text mb-6 tracking-widest">Legendary Prizes</h4>
+                    <p class="text-sm text-gray-400 mb-4 leading-relaxed">Giving away a new (used) car or truck — real prizes, not rented Lambos. Paying off someone’s mortgage live on stream.</p>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <h4 class="font-black text-[10px] uppercase gold-text mb-4">The Vault</h4>
-                    <p class="text-sm text-gray-400 mb-4">A monthly crypto lotto: The Vault fills with rewards, and one holder cracks it open live on camera. Pure chaos, raw and uncut.</p>
+                <div class="glass p-12 rounded-2xl">
+                    <h4 class="font-black text-[12px] uppercase gold-text mb-6 tracking-widest">The Vault</h4>
+                    <p class="text-sm text-gray-400 mb-4 leading-relaxed">A monthly crypto lotto: The Vault fills with rewards, and one holder cracks it open live on camera. Pure chaos, raw and uncut.</p>
                 </div>
             </div>
         </section>
 
         <section id="socials" class="page-section">
-            <div class="text-center mb-16">
-                <h2 class="luxury-font text-5xl mb-6 italic gold-text">Social Channels</h2>
-                <p class="text-gray-400 max-w-4xl mx-auto text-sm leading-relaxed">
-                    Connect with us across our official social channels and become part of an exclusive community built around style, sophistication, and unforgettable experiences. Simply click on any image to explore.
+            <div class="text-center mb-24">
+                <h2 class="luxury-font text-6xl md:text-8xl mb-12 italic gold-text">Social Channels</h2>
+                <p class="text-gray-400 max-w-4xl mx-auto text-lg leading-relaxed">
+                    Connect with us across our official social channels and become part of an exclusive community built around style, sophistication, and unforgettable experiences.
                 </p>
             </div>
             
@@ -238,42 +273,42 @@
                 <a href="https://x.com/theluxxlounge?s=21" target="_blank" class="social-card glass rounded-2xl overflow-hidden group block">
                     <img src="https://i.ibb.co/76vmG5G/IMG-7033.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                     <div class="p-6">
-                        <h3 class="luxury-font text-xl mb-2 italic">Main X</h3>
+                        <h3 class="luxury-font text-2xl mb-2 italic">Main X</h3>
                         <p class="text-xs text-gray-500">Exclusive updates, elegant moments, and curated glimpses into our world.</p>
                     </div>
                 </a>
                 <a href="https://pump.fun/coin/28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump" target="_blank" class="social-card glass rounded-2xl overflow-hidden group block">
                     <img src="https://i.ibb.co/Txw6ggSz/IMG-7032.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                     <div class="p-6">
-                        <h3 class="luxury-font text-xl mb-2 italic">Pump.fun</h3>
+                        <h3 class="luxury-font text-2xl mb-2 italic">Pump.fun</h3>
                         <p class="text-xs text-gray-500">Experience exclusive giveaways, community highlights, and luxury in motion.</p>
                     </div>
                 </a>
                 <a href="https://youtube.com/@luxuriouslounge?si=NxniGqDWz0TVMWUz" target="_blank" class="social-card glass rounded-2xl overflow-hidden group block">
                     <img src="https://i.ibb.co/WNKL741j/IMG-7028.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                     <div class="p-6">
-                        <h3 class="luxury-font text-xl mb-2 italic">YouTube</h3>
+                        <h3 class="luxury-font text-2xl mb-2 italic">YouTube</h3>
                         <p class="text-xs text-gray-500">Discover cinematic stories and exclusive immersive events on our official channel.</p>
                     </div>
                 </a>
                 <a href="https://www.tiktok.com/@theluxuriouslounge?_r=1&_t=ZS-94GEHpB7hw5" target="_blank" class="social-card glass rounded-2xl overflow-hidden group block">
                     <img src="https://i.ibb.co/q3GKmw3W/IMG-7029.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                     <div class="p-6">
-                        <h3 class="luxury-font text-xl mb-2 italic">TikTok</h3>
+                        <h3 class="luxury-font text-2xl mb-2 italic">TikTok</h3>
                         <p class="text-xs text-gray-500">Short, captivating moments that bring our vibrant nightlife to life.</p>
                     </div>
                 </a>
                 <a href="https://www.instagram.com/theluxuriouslounge?igsh=MXNyNHc5bTl1eHRmaA==" target="_blank" class="social-card glass rounded-2xl overflow-hidden group block">
                     <img src="https://i.ibb.co/C3VDQw0W/IMG-7030.jpg" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                     <div class="p-6">
-                        <h3 class="luxury-font text-xl mb-2 italic">Instagram</h3>
+                        <h3 class="luxury-font text-2xl mb-2 italic">Instagram</h3>
                         <p class="text-xs text-gray-500">Where visual elegance, style, and atmosphere meet in every post.</p>
                     </div>
                 </a>
                 <a href="https://t.me/TheLuxuriousLounge" target="_blank" class="social-card glass rounded-2xl overflow-hidden group block">
                     <img src="https://i.ibb.co/S4xz9Q9F/IMG-7031.png" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
                     <div class="p-6">
-                        <h3 class="luxury-font text-xl mb-2 italic">Telegram</h3>
+                        <h3 class="luxury-font text-2xl mb-2 italic">Telegram</h3>
                         <p class="text-xs text-gray-500">Join our inner circle for exclusive updates, insights, and community access.</p>
                     </div>
                 </a>
@@ -281,89 +316,89 @@
         </section>
 
         <section id="buy" class="page-section max-w-3xl mx-auto">
-            <h2 class="luxury-font text-5xl mb-12 italic gold-text text-center">How to Buy $TLLT</h2>
-            <div class="space-y-6">
-                <div class="glass p-6 rounded-xl flex items-center gap-6">
-                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center font-black">1</div>
-                    <p class="text-sm tracking-widest uppercase">Get Phantom — Download the Phantom wallet.</p>
+            <h2 class="luxury-font text-6xl mb-16 italic gold-text text-center">How to Buy $TLLT</h2>
+            <div class="space-y-8">
+                <div class="glass p-8 rounded-xl flex items-center gap-8">
+                    <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center font-black text-xl">1</div>
+                    <p class="text-sm md:text-lg tracking-widest uppercase">Get Phantom — Download the Phantom wallet.</p>
                 </div>
-                <div class="glass p-6 rounded-xl flex items-center gap-6">
-                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center font-black">2</div>
-                    <p class="text-sm tracking-widest uppercase">Get SOL — Buy Solana and transfer it to Phantom.</p>
+                <div class="glass p-8 rounded-xl flex items-center gap-8">
+                    <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center font-black text-xl">2</div>
+                    <p class="text-sm md:text-lg tracking-widest uppercase">Get SOL — Buy Solana and transfer it to Phantom.</p>
                 </div>
-                <div class="glass p-6 rounded-xl flex items-center gap-6">
-                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center font-black">3</div>
-                    <p class="text-sm tracking-widest uppercase">Use Official Links — Click Pump.fun below.</p>
+                <div class="glass p-8 rounded-xl flex items-center gap-8">
+                    <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center font-black text-xl">3</div>
+                    <p class="text-sm md:text-lg tracking-widest uppercase">Use Official Links — Click Pump.fun below.</p>
                 </div>
             </div>
-            <div class="mt-12 text-center p-10 glass rounded-3xl border-white/5">
-                <p class="text-gray-400 italic mb-6">"Still confused? Watch the tutorial video. If you can’t figure it out, maybe crypto isn’t for you."</p>
-                <a href="https://youtu.be/YQXiFuGN-fU" target="_blank" class="gold-text underline uppercase font-black text-xs">Watch Tutorial</a>
+            <div class="mt-20 text-center p-16 glass rounded-3xl border-white/5">
+                <p class="text-gray-400 italic mb-10 text-xl max-w-lg mx-auto leading-relaxed">"Still confused? Watch the tutorial video. If you can’t figure it out, maybe crypto isn’t for you."</p>
+                <a href="https://youtu.be/YQXiFuGN-fU" target="_blank" class="gold-bg px-10 py-4 rounded-full font-black text-[12px] uppercase">Watch Tutorial</a>
             </div>
         </section>
 
         <section id="faq" class="page-section max-w-4xl mx-auto">
-            <h2 class="luxury-font text-5xl mb-12 italic gold-text">FAQ</h2>
-            <div class="space-y-8">
-                <div class="glass p-8 rounded-2xl">
-                    <h4 class="font-bold mb-2">What is The Luxurious Lounge?</h4>
-                    <p class="text-sm text-gray-500">A live show, a community, and the first content-driven token that actually rewards people.</p>
+            <h2 class="luxury-font text-6xl mb-20 italic gold-text">FAQ</h2>
+            <div class="space-y-12">
+                <div class="glass p-10 rounded-2xl">
+                    <h4 class="font-bold text-2xl mb-4">What is The Luxurious Lounge?</h4>
+                    <p class="text-sm md:text-lg text-gray-500 leading-relaxed">A live show, a community, and the first content-driven token that actually rewards people.</p>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <h4 class="font-bold mb-2">Is this a meme coin?</h4>
-                    <p class="text-sm text-gray-500">No. This is a content creator’s coin. Meme coins are for clowns.</p>
+                <div class="glass p-10 rounded-2xl">
+                    <h4 class="font-bold text-2xl mb-4">Is this a meme coin?</h4>
+                    <p class="text-sm md:text-lg text-gray-500 leading-relaxed">No. This is a content creator’s coin. Meme coins are for clowns.</p>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <h4 class="font-bold mb-2">What makes this different?</h4>
-                    <p class="text-sm text-gray-500">I’m a real person, I run a real business, and I actually deliver. Some won’t like me. Most will love me.</p>
+                <div class="glass p-10 rounded-2xl">
+                    <h4 class="font-bold text-2xl mb-4">What makes this different?</h4>
+                    <p class="text-sm md:text-lg text-gray-500 leading-relaxed">I’m a real person, I run a real business, and I actually deliver. Some won’t like me. Most will love me.</p>
                 </div>
             </div>
         </section>
 
         <section id="hours" class="page-section text-center">
-            <div class="glass p-20 inline-block rounded-full border-[#b38728]/20 shadow-[0_0_50px_rgba(179,135,40,0.1)]">
-                <h2 class="luxury-font text-4xl mb-6 italic gold-text">Streaming Hours</h2>
-                <div class="h-px w-20 bg-[#b38728] mx-auto mb-6"></div>
-                <p class="text-2xl font-black uppercase tracking-widest">Tuesdays & Thursdays</p>
-                <p class="text-xl text-gray-400 mt-2">5:00 PM — 6:00 PM</p>
+            <div class="glass p-24 inline-block rounded-full border-[#b38728]/20 shadow-[0_0_50px_rgba(179,135,40,0.1)]">
+                <h2 class="luxury-font text-5xl mb-10 italic gold-text">Streaming Hours</h2>
+                <div class="h-px w-20 bg-[#b38728] mx-auto mb-10"></div>
+                <p class="text-3xl font-black uppercase tracking-widest">Tuesdays & Thursdays</p>
+                <p class="text-xl text-gray-400 mt-4">5:00 PM — 6:00 PM</p>
             </div>
         </section>
 
         <section id="contact" class="page-section max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
+            <div class="grid md:grid-cols-2 gap-24">
                 <div>
-                    <h2 class="luxury-font text-5xl mb-8 italic gold-text">Contact Us</h2>
-                    <p class="text-gray-400 mb-8 leading-relaxed italic">"Pull up a chair — your message might just start the next big move."</p>
-                    <div class="space-y-6">
+                    <h2 class="luxury-font text-6xl mb-10 italic gold-text">Contact Us</h2>
+                    <p class="text-gray-400 mb-10 text-xl leading-relaxed italic">"Pull up a chair — your message might just start the next big move."</p>
+                    <div class="space-y-8">
                         <div>
-                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.3em] block">Email</span>
-                            <p class="font-bold">David@luxuriousstudios.show</p>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.3em] block mb-2">Email</span>
+                            <p class="font-bold text-xl">David@luxuriousstudios.show</p>
                         </div>
                         <div>
-                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.3em] block">Telegram</span>
-                            <p class="font-bold">@TheLuxuriousLounge</p>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.3em] block mb-2">Telegram</span>
+                            <p class="font-bold text-xl">@TheLuxuriousLounge</p>
                         </div>
                         <div>
-                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.3em] block">Official CA</span>
+                            <span class="text-[10px] text-gray-500 uppercase tracking-[0.3em] block mb-2">Official CA</span>
                             <p class="font-bold text-[#b38728] text-xs">28EtJ8fBo5SqqBUPGdyLrdSYgUoW9dFKFRwn5XUrpump</p>
                         </div>
                     </div>
                 </div>
-                <form class="glass p-10 rounded-2xl space-y-4">
+                <form class="glass p-12 rounded-2xl space-y-6">
                     <div class="grid grid-cols-2 gap-4">
                         <input type="text" placeholder="First Name" class="w-full p-4 rounded-lg">
                         <input type="text" placeholder="Last Name" class="w-full p-4 rounded-lg">
                     </div>
                     <input type="email" placeholder="Your Email" class="w-full p-4 rounded-lg">
                     <textarea placeholder="Your Message" rows="5" class="w-full p-4 rounded-lg"></textarea>
-                    <button class="gold-bg w-full py-4 font-black uppercase tracking-widest text-xs">Send Message</button>
+                    <button class="gold-bg w-full py-5 font-black uppercase tracking-widest text-[12px]">Send Message</button>
                 </form>
             </div>
         </section>
 
     </main>
 
-    <footer class="text-center py-20 border-t border-white/5 opacity-30 text-[10px] tracking-[0.5em] uppercase">
+    <footer class="text-center py-24 border-t border-white/5 opacity-30 text-[10px] tracking-[0.5em] uppercase">
         © 2025 THE LUXURIOUS LOUNGE | REDEFINING LUXURY
     </footer>
 
